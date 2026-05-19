@@ -1,0 +1,9 @@
+{
+  "name": "cs-mock",
+  "version": "1.0.0",
+  "private": true,
+  "main": "cs-mock.js",
+  "scripts": {
+    "start": "node cs-mock.js"
+  }
+}
