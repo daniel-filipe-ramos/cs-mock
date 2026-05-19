@@ -45,6 +45,12 @@ const server = http.createServer(async (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.statusCode = 200;
 
+  // GET /api/internal/v1/health
+  if (url.includes('/health')) {
+    res.end(JSON.stringify({ status: 'ok', service: 'conversionsync-mock', uptime: process.uptime() }));
+    return;
+  }
+
   // POST /api/internal/v1/visitors/identify
   if (method === 'POST' && url.includes('/identify')) {
     const email = body.email || body.traits?.email || 'unknown';
