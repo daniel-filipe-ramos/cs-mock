@@ -10,7 +10,7 @@
  * what SOS24 is sending to CS without needing a real CS instance.
  */
 
-const http = require('http');
+import http from 'node:http';
 
 const PORT = process.env.PORT || 3050;
 
